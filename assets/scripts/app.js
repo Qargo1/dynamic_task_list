@@ -1,9 +1,7 @@
-// Ensure the class NewProject correctly initializes and the event listener is bound properly.
 const submitBtn = document.querySelector('#new-project-btn');
 const activeProjectsList = document.querySelector('#active-projects-list');
 const finishedProjectsList = document.querySelector('#finished-projects-list');
 const allProjects = [];
-// const allProjectCards = [];
 
 class NewProject {
     static id = 0;
