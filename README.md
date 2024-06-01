@@ -20,7 +20,7 @@
 
 ---
 
-### README (на английском)
+### README
 
 # Dynamic Project List
 
