@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Project Board</title>
+  <link rel="stylesheet" href="assets/styles/app.css" />
+  <script src="assets/scripts/app.js" defer></script>
+</head>
+
+<body>
+  <header id="main-header">
+    <h1>Project Planner</h1>
+  </header>
+  <section id="new-project-input">
+    <header>
+      <h2>New Project</h2>
+    </header>
+    <form class="new-project-form">
+      <label for="new-project-name">Project Name</label>
+      <input type="text" name="project-name" id="new-project-name" />
+      <label for="new-project-date">Due Date</label>
+      <input type="date" name="project-due-date" id="new-project-date" />
+      <label for="new-project-description">Description</label>
+      <textarea name="project-description" id="new-project-description"></textarea>
+      <label for="new-project-additional-info">Additional info</label>
+      <textarea name="project-additional-info" id="new-project-additional-info"></textarea>
+      <button type="submit" id="new-project-btn">Add Project</button>
+    </form>
+  </section>
+  <section id="active-projects">
+    <header>
+      <h2>Active Projects</h2>
+    </header>
+    <ul id="active-projects-list">
+    </ul>
+  </section>
+  <section id="finished-projects">
+    <header>
+      <h2>Finished Projects</h2>
+    </header>
+    <ul id="finished-projects-list">
+    </ul>
+  </section>
+</body>
+
+</html>
