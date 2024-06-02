@@ -1,4 +1,6 @@
-### README (на русском)
+### README
+
+[**Страница с развернутой игрой**](https://dynamic-task-list.vercel.app/)
 
 # Динамический список проектов
 
@@ -18,7 +20,7 @@
 
 ---
 
-### README (на английском)
+### README
 
 # Dynamic Project List
 
