@@ -41,14 +41,27 @@ class Project {
         
         const moreInfoBtn = createCardContent('button', 'More Info');
         moreInfoBtn.classList.add('alt');
+        let isExist = false;
         moreInfoBtn.addEventListener('click', () => {
-            alert(`More Info: ${this.additionalInfo}`);
+            if (!isExist) {
+                const moreInfo = document.createElement('div');
+                moreInfo.textContent = this.additionalInfo;
+                card.appendChild(moreInfo);
+                isExist = true;
+            } else {
+                card.removeChild(card.querySelector('div'));
+                isExist = false;
+            }
+
         });
         
         const statusBtn = createCardContent('button', 'Finish');
         statusBtn.addEventListener('click', () => {
             this.toggleStatus()
             statusBtn.textContent = this._active ? 'Finish' : 'Activate';
+
+            const y = statusBtn.offsetTop;
+            finishedProjectsList.scrollBy({top: 150, behavior:'smooth'});
         });
         
         this.element = card;
@@ -86,7 +99,7 @@ class App {
         document.querySelector('#new-project-date').value = '';
         document.querySelector('#new-project-description').value = '';
         document.querySelector('#new-project-additional-info').value = '';
-    }
+    };
 }
 
 submitBtn.addEventListener('click', (event) => {
